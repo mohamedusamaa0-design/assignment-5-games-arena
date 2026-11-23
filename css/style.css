@@ -1,0 +1,482 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url(../assets/font/Oswald/);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Days on";
+  src: url(../assets/font/Days_One/DaysOne-Regular.ttf);
+}
+
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-color:#cbfe1c;
+}
+
+* img{
+  display: block;
+}
+
+.main-color{
+  color: #cbfe1c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title p{
+  
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: var(--main-color);
+  position: relative;
+   width: fit-content;
+   margin: 0 auto;
+}
+.title p::after{
+  content: "";
+  width:80px;
+  height: 3px;
+  background: linear-gradient(to left, var(--main-color) , transparent);
+  position: absolute;
+  top:40%;
+  left: -100px;
+  transform: translateY(50%);
+  
+}
+.title p::before{
+  content: "";
+  width:80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--main-color) , transparent);
+  position: absolute;
+  top:40%;
+  right: -100px;
+  transform: translateY(50%);
+  
+}
+
+.title{
+  text-align: center;
+
+}
+
+
+
+/* End Globle Style */
+
+
+/* style nav */
+
+.my-nav{
+
+  background-color: rgb(17, 13, 13);
+}
+
+.my-nav .navbar-brand{
+
+  color: #cbfe1c;
+
+}
+
+.my-nav .navbar-nav .nav-item{
+
+  margin-right: 20px;
+}
+
+.my-nav .navbar-nav a.nav-link{
+  padding-inline: 0;
+  color:#fff;
+  position: relative;
+}
+
+.my-nav .navbar-nav a.nav-link.active{
+  position: relative;
+  color: var(--main-color);
+}
+
+.my-nav .navbar-nav a.nav-link.active::after{
+  content: "";
+  width:100%;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+}
+
+.my-nav .navbar-nav a.nav-link::after{
+  content: "";
+  width:0%;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  transition: width 1s;
+}
+
+.my-nav .navbar-nav a.nav-link:hover::after{
+  width: 100%;
+
+}
+
+/* end nav */
+
+
+
+/* style hero */
+
+
+.header{
+  height: 100vh;
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0,0.8), rgba(0,0,0,0.6)), url(../assets/images/vibrant-gaming-arena-with-a-trophy-illuminated-by-neon-lights-at-night-free-photo.jpeg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.header .header-box{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-box img{
+
+height: 350px;
+object-fit: cover;
+display: block;
+border-radius: 15px;
+
+}
+
+
+
+
+
+.header .left-header{
+  
+
+  width: 50%;
+}
+
+.header .left-header button{
+  border: 16px 30px;
+
+}
+
+.header .left-header h1{
+  font-family: "Days on" sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  
+  
+
+}
+
+.header .left-header p{
+  width: 85%;
+  line-height: 25px;
+}
+
+.header .header-box .right-header{
+  border: 3px solid var(--main-color);
+  width: 45%;
+  border-radius: 15px;
+  position: relative;
+}
+
+.header .header-box .patch{
+ 
+  width: fit-content;
+  gap: 15px;
+  padding: 20px 20px;
+  background-color: #0B0E13;
+  border: 1px solid #99a1af;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  border-radius: 10px;
+
+}
+.header .header-box .patch i {
+  font-size: 21px;
+}
+
+.header .header-box .patch p{
+  margin: 0;
+
+}
+.header .header-box .patch p:first-child{
+  font-size: 13px;
+  font-weight: 400;
+  color: #99a1af;
+
+}
+
+.header .header-box .patch p:last-child{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+
+
+/* end hero */
+
+
+/* style sec 1  */
+
+.card-game{
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px ;
+  border: 2px solid transparent;
+  background: transparent;
+  transition: 0.5;
+}
+.card-game:hover {
+  border-color: #cbfe1c;
+}
+
+
+.game-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ padding: 15px;
+ background: linear-gradient(to bottom, transparent 50%, #cbfe1c );
+  opacity: 0;
+  transition: .8s;
+ 
+}
+
+.card-game img{
+
+    transition: 0.5s;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+}
+.card-game:hover img {
+  transform: scale(1.1);
+  
+}
+
+.game-overlay h5 {
+  transform: translateY(45px);
+  transition: 0.7s;
+    font-size: 24px;
+  font-weight: 700;
+}
+.card-game:hover .game-overlay h5 {
+  transform: translateY(0);
+}
+
+
+.card-game .game-overlay i{
+  color: var(--main-color);
+ font-size: small;
+}
+
+.card-game .game-overlay span{
+  background-color: rgba(0, 0, 0,0.5);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: .8125rem;
+  font-weight: 700;
+  transform: translateY(-45px);
+  transition: .5s;
+}
+.card-game:hover .game-overlay span {
+  transform: translateY(0);
+}
+.game-tags {
+  display: flex;
+  gap: 10px;
+ 
+}
+.card-game:hover .game-overlay{
+    opacity: 1;
+   
+    transition: 0.3s;
+    
+}
+
+.game-card:hover{
+  
+  border-color: #cbfe1c;
+
+}
+
+.games{
+  margin-top: 30px 0;
+  background-color: #0B0E13;
+  color: #fff;
+}
+
+
+.games .carousel .carousel-control-prev,
+.games .carousel .carousel-control-next{
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--main-color);
+  border-radius: 50px;
+}
+
+
+
+/* end sec1 */
+
+/* style sec2 */
+
+.teams{
+  margin-top: 30px 0;
+  background-color: #0B0E13;
+  color: #fff;
+}
+
+.teams .service-card{
+  background-color: #1A1A1A;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  
+}
+
+.teams .service-card .service-icon{
+  width: 80px;
+  height: 80px;
+  background-color:#1E2939 ;
+  color: #cbfe1c;
+  border-radius: 18px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+
+}
+.teams .service-card h5{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+
+}
+
+.teams  .img-card{
+
+  border-radius: 20px;
+  overflow: hidden;
+  
+  
+
+}
+
+
+.service-card:hover {
+  border-color: #cbfe1c;
+}
+
+.service-card:hover .service-icon {
+  background-color: #cbfe1c;
+  color: #151a21;
+}
+
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #cbfe1c;
+  border-right: 30px solid transparent;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate(-45%,-45%);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #cbfe1c;
+  border-left: 30px solid transparent;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate(45%,45%);
+}
+
+.service-card:hover::after {
+  opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+
+
+
+
+
+
+/* end sec2 */
+
+/* style footer */
+
+/* end footer */
